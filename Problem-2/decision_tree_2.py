@@ -12,8 +12,8 @@
 from sklearn import tree
 import pandas as pd
 
-dataSets = ['contact_lens_training_1.csv', 'contact_lens_training_2.csv', 'contact_lens_training_3.csv']
-
+# dataSets = ['contact_lens_training_1.csv', 'contact_lens_training_2.csv', 'contact_lens_training_3.csv']
+dataSets = ['contact_lens_training_1.csv']
 #Reading the test data in a csv file using pandas
 dbTest = []
 df_test = pd.read_csv('contact_lens_test.csv')
@@ -28,15 +28,36 @@ for ds in dataSets:
 
     #Reading the training data in a csv file using pandas
     # --> add your Python code here
-    dbTraining =
+    dbTraining = pd.read_csv(ds).values.tolist()
+    print(dbTraining) #Test Print
 
     #Transform the original categorical training features to numbers and add to the 4D array X.
     #For instance Young = 1, Prepresbyopic = 2, Presbyopic = 3, X = [[1, 1, 1, 1], [2, 2, 2, 2], ...]]
     #--> add your Python code here
+    
+    Feature_Mapping = {
+        'Young': 1,
+        'Prepresbyopic': 2,
+        'Presbyopic': 3,
+        'Myope': 1,
+        'Hypermetrope': 2,
+        'Yes': 1,
+        'No': 2,
+        "Normal": 1,
+        "Reduced": 2
+    }
+
+    for data in dbTraining:
+        features = [Feature_Mapping[data[0]], Feature_Mapping[data[1]], Feature_Mapping[data[2]], Feature_Mapping[data[3]]]
+        X.append(features)
+    print(X) # Test Print
 
     #Transform the original categorical training classes to numbers and add to the vector Y.
     #For instance Yes = 1 and No = 2, Y = [1, 1, 2, 2, ...]
     #--> add your Python code here
+    for data in dbTraining:
+        Y.append(Feature_Mapping[data[4]])
+    print(Y) # Test Print
 
     #Loop your training and test tasks 10 times here
     for i in range (10):
