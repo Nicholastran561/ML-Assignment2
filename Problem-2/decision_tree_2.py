@@ -1,7 +1,7 @@
 #-------------------------------------------------------------------------
-# AUTHOR: your name
-# FILENAME: title of the source file
-# SPECIFICATION: description of the program
+# AUTHOR: Nicholas Tran
+# FILENAME: decision_tree_2.py
+# SPECIFICATION: Run train 3 decision tree models on 3 different data sets and calculate thier average accuracy over 10 iterations for each set.
 # FOR: CS 4210- Assignment #2
 # TIME SPENT: how long it took you to complete the assignment
 #-----------------------------------------------------------*/
