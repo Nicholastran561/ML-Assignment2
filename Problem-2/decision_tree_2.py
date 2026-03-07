@@ -3,7 +3,7 @@
 # FILENAME: decision_tree_2.py
 # SPECIFICATION: Run train 3 decision tree models on 3 different data sets and calculate thier average accuracy over 10 iterations for each set.
 # FOR: CS 4210- Assignment #2
-# TIME SPENT: how long it took you to complete the assignment
+# TIME SPENT: 1 day and 5 hours
 #-----------------------------------------------------------*/
 
 #IMPORTANT NOTE: YOU ARE ALLOWED TO USE ANY PYTHON LIBRARY TO COMPLETE THIS PROGRAM
